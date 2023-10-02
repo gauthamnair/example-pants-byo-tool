@@ -4,6 +4,7 @@ pythonpath = ["%(buildroot)s/pants-plugins"]
 backend_packages.add = [
   "pants.backend.python",
   "pants.backend.python.lint.flake8",
+#  "pants.backend.byolinter",
   "byo_linters",
 ]
 

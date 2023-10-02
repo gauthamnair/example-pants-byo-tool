@@ -15,8 +15,9 @@ confs = [
         options_scope='byo_markdownlint',
         name="MarkdownLint",
         help="A markdown linter based on your installed markdown lint.",
-        command="markdownlint",
         file_extensions=[".md"],
+        command="markdownlint",
+        tools=["node"],
     )
 ]
 
