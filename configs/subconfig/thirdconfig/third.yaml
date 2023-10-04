@@ -1,0 +1,4 @@
+---
+third_level_subconfig :
+  - baz
+  - too
