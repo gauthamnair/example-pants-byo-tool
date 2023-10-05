@@ -18,6 +18,7 @@ enable_resolves = true
 
 [python.resolves]
 byo_flake8 = "byo_flake8.lock"
+byo_black = "byo_black.lock"
 
 [source]
 root_patterns = ["/"]
