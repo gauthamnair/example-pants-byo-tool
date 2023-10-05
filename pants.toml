@@ -4,9 +4,9 @@ pythonpath = ["%(buildroot)s/pants-plugins"]
 backend_packages.add = [
   "pants.backend.python",
 #  "pants.backend.python.lint.flake8",
-  "pants.backend.byolinter",
+#  "pants.backend.byolinter",
 #  "pants.backend.experimental.tools.yamllint",
-#  "byo_linters",
+   "byo_linters",
 ]
 
 [anonymous-telemetry]
