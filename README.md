@@ -5,13 +5,17 @@ Tests exploring possibilities around https://github.com/pantsbuild/pants/issues/
 
 ## To run
 
-You need the pants branch referenced in https://github.com/pantsbuild/pants/pull/19954
+You need the pants branch referenced in https://github.com/pantsbuild/pants/pull/19954 . Then set:
+```shell
+$ export PANTS_SOURCE=<your-local-pants-with-branch-installed>
+```
 
 You need markdownlint installed and available on your path (as well as its dependency `node`)
 
+
+
 Then you can run:
 ```shell
-$ export PANTS_SOURCE=<your-local-pants-with-branch-installed>
 $ pants fmt ::
 black - byo_black made changes.
   hello.py
@@ -32,7 +36,7 @@ $ pants lint ::
 
 You can subset by folder:
 ```shell
-$ pants_from_sources lint docs/subsection/
+$ pants lint docs/subsection/
 
 ✓ byo_markdownlint succeeded.
 ```
