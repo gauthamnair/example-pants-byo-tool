@@ -6,11 +6,11 @@ python_requirement(
     resolve="byo_black"
 )
 
-python_requirement(
-    name="typing_extensions",
-    requirements=['typing-extensions>=3.10.0.0; python_version < "3.10"'],
-    resolve="byo_black"
-)
+# python_requirement(
+#     name="typing_extensions",
+#     requirements=['typing-extensions>=3.10.0.0; python_version < "3.10"'],
+#     resolve="byo_black"
+# )
 
 
 file(
@@ -46,14 +46,16 @@ code_quality_tool(
 system_binary(
     name="node",
     binary_name="node",
-    fingerprint=r"v20\.7\.0",
+    # fingerprint=r"v20\.7\.0",
+    fingerprint=r'.*',
     fingerprint_args=["--version"],
 )
 
 system_binary(
     name="markdownlint",
     binary_name="markdownlint",
-    fingerprint=r'0\.37\.0',
+    # fingerprint=r'0\.37\.0',
+    fingerprint=r'.*',
     fingerprint_args=['--version'],
     fingerprint_dependencies=[':node']
 )
