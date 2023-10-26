@@ -6,12 +6,6 @@ python_requirement(
     resolve="byo_black"
 )
 
-# python_requirement(
-#     name="typing_extensions",
-#     requirements=['typing-extensions>=3.10.0.0; python_version < "3.10"'],
-#     resolve="byo_black"
-# )
-
 
 file(
     name="flake8_conf",
