@@ -1,11 +1,10 @@
 [GLOBAL]
 pants_version = "2.17.0"
-#pythonpath = ["%(buildroot)s/pants-plugins"]
 backend_packages.add = [
     "pants.backend.python",
-#    "pants.backend.experimental.code_quality_tool(goal='lint', target='//:flake8_linter', scope='flake8', name='Flake8')",
-#    "pants.backend.experimental.code_quality_tool(goal='fmt', target='//:black_formatter', scope='black_tool', name='Black')",
+    "pants.backend.experimental.code_quality_tool(goal='lint', target='//:flake8_linter', scope='flake8', name='Flake8')",
     "pants.backend.experimental.code_quality_tool(goal='lint', target='//:markdownlint_linter', scope='markdownlint', name='Markdown Lint')",
+    "pants.backend.experimental.code_quality_tool(goal='fmt', target='//:black_formatter', scope='black_tool', name='Black')",
 ]
 
 [anonymous-telemetry]
