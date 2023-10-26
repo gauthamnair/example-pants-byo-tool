@@ -35,6 +35,14 @@ byolinter(
     file_glob_exclude=["pants-plugins/**"],
 )
 
+byolinter(
+    name="black_formatter",
+    runnable=":black",
+    runnable_dependencies=[],
+    file_glob_include=["**/*.py"],
+    file_glob_exclude=["pants-plugins/**"],
+)
+
 system_binary(
     name="node",
     binary_name="node",
