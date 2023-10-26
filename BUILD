@@ -25,7 +25,7 @@ python_requirement(
     resolve="byo_flake8"
 )
 
-byolinter(
+code_quality_tool(
     name="flake8_linter",
     runnable=":flake8",
     runnable_dependencies=[],
@@ -35,7 +35,7 @@ byolinter(
     file_glob_exclude=["pants-plugins/**"],
 )
 
-byolinter(
+code_quality_tool(
     name="black_formatter",
     runnable=":black",
     runnable_dependencies=[],
@@ -58,7 +58,7 @@ system_binary(
     fingerprint_dependencies=[':node']
 )
 
-byolinter(
+code_quality_tool(
     name="markdownlint_linter",
     runnable=':markdownlint',
     runnable_dependencies=[":node"],
