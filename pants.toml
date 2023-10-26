@@ -1,11 +1,13 @@
 [GLOBAL]
 pants_version = "2.17.0"
-pythonpath = ["%(buildroot)s/pants-plugins"]
+#pythonpath = ["%(buildroot)s/pants-plugins"]
 backend_packages.add = [
-  "pants.backend.python",
-   "byo_linters",
+    "pants.backend.python",
+    "pants.backend.experimental.byotool"
+#   "byo_linters",
 # Convenient to use instead while developing/debuggin the plugin:
 #  "pants.backend.byolinter",
+
 ]
 
 [anonymous-telemetry]

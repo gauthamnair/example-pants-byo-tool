@@ -1,3 +1,7 @@
+import os
+# The .flake8 config ignores unused import errors
+
+
 def hello_world():
     print("Hello world")  # black is not going to like these single quotes
 

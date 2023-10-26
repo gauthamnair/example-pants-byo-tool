@@ -17,3 +17,45 @@ python_requirement(
     requirements=['typing-extensions>=3.10.0.0; python_version < "3.10"'],
     resolve="byo_black"
 )
+
+
+file(
+    name="flake8_conf",
+    source=".flake8"
+)
+
+
+byolinter(
+    name="flake8_linter",
+    runnable=":flake8",
+    runnable_dependencies=[],
+    execution_dependencies=[":flake8_conf"],
+    file_glob_include=["**/*.py"],
+    file_glob_exclude=["pants-plugins/**"],
+)
+
+
+
+byolinter(
+    name="markdownlint_linter",
+    runnable=':markdownlint',
+    runnable_dependencies=[":node"],
+    file_glob_include=["**/*.md"],
+    file_glob_exclude=["README.md"],
+)
+
+
+system_binary(
+    name="markdownlint",
+    binary_name="markdownlint",
+    fingerprint=r'0\.37\.0',
+    fingerprint_args=['--version'],
+    fingerprint_dependencies=[':node']
+)
+
+system_binary(
+    name="node",
+    binary_name="node",
+    fingerprint=r"v20\.7\.0",
+    fingerprint_args=["--version"],
+)
