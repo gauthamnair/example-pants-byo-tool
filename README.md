@@ -24,7 +24,7 @@ $ git diff hello.py
 
 $ pants_from_sources lint ::
 
-✕ black_tool failed.
+✓ black_tool succeeded.
 ✓ flake8 succeeded.
 ✓ markdownlint succeeded.
 ```
