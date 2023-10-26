@@ -57,4 +57,21 @@ $ pants lint --flake8-skip ::
 ✓ markdownlint succeeded.
 ```
 
+And there is some minimal help:
+```shell
+$ pants help flake8
+`flake8` subsystem options
+--------------------------
 
+Lint with Flake8. Tool defined in //:flake8_linter
+ 
+Activated by pants.backend.experimental.code_quality_tool
+Config section: [flake8]
+ 
+  --[no-]flake8-skip
+  PANTS_FLAKE8_SKIP
+  skip
+      default: False
+      current value: False
+      If true, don't use Flake8 when running `pants lint`.
+```
