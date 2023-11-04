@@ -5,7 +5,7 @@ import os
 
 
 def hello_world():
-    print('Hello world')  # change this to single quotes for black to change it.
+    print("Hello world")  # change this to single quotes for black to change it.
 
 
 def move_up_to_make_it_too_close_for_flake8():

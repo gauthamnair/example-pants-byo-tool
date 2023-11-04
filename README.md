@@ -5,7 +5,7 @@ Tests exploring possibilities around https://github.com/pantsbuild/pants/issues/
 
 ## To run
 
-You need the pants branch referenced in https://github.com/pantsbuild/pants/pull/19954 . Then set:
+You need the pants branch referenced in https://github.com/pantsbuild/pants/pull/20135 . Then set:
 ```shell
 $ export PANTS_SOURCE=<your-local-pants-with-branch-installed>
 ```

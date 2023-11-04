@@ -22,19 +22,17 @@ python_requirement(
 code_quality_tool(
     name="flake8_linter",
     runnable=":flake8",
-    runnable_dependencies=[],
     execution_dependencies=[":flake8_conf"],
     args=["--max-line-length", "100"],
     file_glob_include=["**/*.py"],
-    file_glob_exclude=["pants-plugins/**"],
+    file_glob_exclude=[],
 )
 
 code_quality_tool(
     name="black_formatter",
     runnable=":black",
-    runnable_dependencies=[],
     file_glob_include=["**/*.py"],
-    file_glob_exclude=["pants-plugins/**"],
+    file_glob_exclude=[],
 )
 
 system_binary(
