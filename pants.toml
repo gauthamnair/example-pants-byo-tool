@@ -4,8 +4,32 @@ pythonpath = ["%(buildroot)s/pants-plugins"]
 backend_packages.add = [
     "pants.backend.python",
     "pants.backend.experimental.adhoc",
-    "in_repo_tools",
+    "flake8_linter",
+    "markdownlint_linter",
+    "black_formatter",
 ]
+
+[GLOBAL.generated_backends.flake8_linter]
+backend_template = "pants.backend.experimental.adhoc.code_quality_tool_backend_template"
+goal = "lint"
+target = "//:flake8_linter"
+scope = "flake8"
+name = "Flake8"
+
+[GLOBAL.generated_backends.markdownlint_linter]
+backend_template = "pants.backend.experimental.adhoc.code_quality_tool_backend_template"
+goal = "lint"
+target = "//:markdownlint_linter"
+scope = "markdownlint"
+name = "Markdown Lint"
+
+[GLOBAL.generated_backends.black_formatter]
+backend_template = "pants.backend.experimental.adhoc.code_quality_tool_backend_template"
+goal = "fmt"
+target = "//:black_formatter"
+scope = "black_tool"
+name = "Black"
+
 
 [anonymous-telemetry]
 enabled = false
