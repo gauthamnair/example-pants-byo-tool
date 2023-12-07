@@ -5,7 +5,7 @@ Tests exploring possibilities around https://github.com/pantsbuild/pants/issues/
 
 ## To run
 
-You need the pants branch referenced in https://github.com/pantsbuild/pants/pull/20135 . Then set:
+You need the pants branch referenced in https://github.com/pantsbuild/pants/pull/20270 . Then set:
 ```shell
 $ export PANTS_SOURCE=<your-local-pants-with-branch-installed>
 ```
@@ -17,14 +17,14 @@ Then you can run:
 $ pants fmt ::
 ...
 
-+ black_tool made changes.
++ blackfmt made changes.
 $ git diff hello.py
 -    print('Hello world')  # black is not going to like these single quotes
 +    print("Hello world")  # black is not going to like these single quotes
 
 $ pants_from_sources lint ::
 
-✓ black_tool succeeded.
+✓ blackfmt succeeded.
 ✓ flake8 succeeded.
 ✓ markdownlint succeeded.
 ```
