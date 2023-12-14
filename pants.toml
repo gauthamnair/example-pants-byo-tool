@@ -9,19 +9,19 @@ backend_packages.add = [
 ]
 
 [GLOBAL.templated_backends.flake8]
-package = "pants.backend.experimental.adhoc.code_quality_tool_backend_template"
+template = "pants.backend.experimental.adhoc.code_quality_tool_backend_template"
 goal = "lint"
 target = "//:flake8_linter"
 name = "Flake8"
 
 [GLOBAL.templated_backends.markdownlint]
-package = "pants.backend.experimental.adhoc.code_quality_tool_backend_template"
+template = "pants.backend.experimental.adhoc.code_quality_tool_backend_template"
 goal = "lint"
 target = "//:markdownlint_linter"
 name = "Markdown Lint"
 
 [GLOBAL.templated_backends.blackfmt]
-package = "pants.backend.experimental.adhoc.code_quality_tool_backend_template"
+template = "pants.backend.experimental.adhoc.code_quality_tool_backend_template"
 goal = "fmt"
 target = "//:black_formatter"
 name = "Black"
